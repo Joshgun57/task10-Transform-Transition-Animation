@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.galaxy{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orbit{
+    padding: 25px;
+    border: 1px dashed wheat;
+    border-radius: 50%;
+    position: relative;
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.pluto{
+    animation-duration: 80s;
+}
+.neptune{
+    animation-duration: 70s;
+}
+.uranus{
+    animation-duration: 60s;
+}
+.saturn{
+    animation-duration: 55s;
+}
+.jupiter{
+    animation-duration: 50s;
+}
+.mars{
+    animation-duration: 40s;
+}
+.earth{
+    animation-duration: 30s;
+}
+.venus{
+    animation-duration: 20s;
+}
+.mercury{
+    animation-duration: 10s;
+}
+.orbit::before{
+    content: '';
+    background-size: 100%;
+    position: absolute;
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    animation-direction: reverse;
+}
+
+.pluto::before{
+    width: 45px;
+    height: 45px;
+    background-image: url(https://www.dropbox.com/s/z7axkafhs887t9b/pluto.png?raw=1);
+    top: 65px;
+    left: 60px;
+}
+.neptune::before{
+    width: 45px;
+    height: 45px;
+    background-image: url(https://www.dropbox.com/s/170sr7xl6gxpona/neptune.png?raw=1);
+    top: 60px;
+    left: 53px;
+}
+.uranus::before{
+    width: 40px;
+    height: 40px;
+    background-image: url(https://www.dropbox.com/s/du6znsmfos2r4ry/uranus.png?raw=1);
+    left: 55px;
+    top: 50px;
+}
+.saturn::before{
+    width: 40px;
+    height: 40px;
+    background-image: url(https://www.dropbox.com/s/h8pj72v6mmaa0yq/saturn.png?raw=1);
+    left: 45px;
+    top: 45px;
+}
+.jupiter::before{
+    background-image: url(https://www.dropbox.com/s/d28oxi2c74zcoqk/jupiter.png?raw=1);
+    width: 43px;
+    height: 43px;
+    left: 33px;
+    top: 38px;
+}
+.mars::before{
+    width:40px;
+    height: 40px;   
+    left: 30px;
+    top: 30px;
+    background-image: url(https://www.dropbox.com/s/fa9biyj617n1q30/mars.png?raw=1);
+}
+.earth::before{
+    height: 45px;   
+    width: 45px;
+    background-image: url(https://www.dropbox.com/s/ropzlyhb1v19l5t/earth.png?raw=1);
+    top: 15px;
+}
+.venus::before{
+    width: 17%;
+    height: 40px;
+    background-image: url(https://www.dropbox.com/s/wvictuysutiirho/venus.png?raw=1);
+    top: 0px;
+    left: 30px;
+}
+.mercury::before{
+    width: 20%;
+    height: 36px;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/360/360751.png);
+    top: -4px;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
